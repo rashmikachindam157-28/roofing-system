@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Roofing Service</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        /* Booking section styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #e0f7fa, #ffffff);
+            margin: 0;
+            padding: 0;
+        }
+
+        .booking-section{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            padding:80px 20px;
+        }
+
+        .booking-card{
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 40px;
+            width: 400px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            text-align:center;
+            animation: fadeIn 1s ease;
+        }
+
+        .booking-card h1{
+            margin-bottom:15px;
+            color:#00e5ff;
+        }
+
+        .booking-card p{
+            font-size:14px;
+            color:#333;
+            margin-bottom:25px;
+        }
+
+        .booking-card input,
+        .booking-card textarea{
+            width:100%;
+            padding:12px 15px;
+            margin-bottom:15px;
+            border:none;
+            border-radius:10px;
+            background: rgba(255, 255, 255, 0.925);
+            outline:none;
+            font-size:14px;
+        }
+
+        .booking-card button{
+            padding:12px 20px;
+            border:none;
+            border-radius:10px;
+            background:#00e5ff;
+            color:#000;
+            font-weight:bold;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .booking-card button:hover{
+            background:#00c0cc;
+        }
+
+        @keyframes fadeIn{
+            0%{opacity:0; transform:translateY(20px);}
+            100%{opacity:1; transform:translateY(0);}
+        }
+    </style>
+</head>
+<body>
+    <section class="booking-section">
+        <div class="booking-card">
+            <h1>Book Roofing Service</h1>
+            <p>Fill the form and our roofing experts will contact you.</p>
+
+            <form method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="text" name="phone" placeholder="Phone Number" required>
+                <input type="text" name="address" placeholder="Address" required>
+                <textarea name="problem" placeholder="Describe your roofing issue" required></textarea>
+                <button type="submit">Submit Request</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
